@@ -1,0 +1,78 @@
+<!doctype html>
+<html data-ng-app="playa" data-ng-csp="" data-ng-cloak>
+    <head>
+        <meta charset="utf-8">
+        <title>playa</title>
+
+        <!-- build:css styles/vendor.css -->
+        <!-- bower:css -->
+        <!-- endbower -->
+        <!-- endbuild -->
+
+        <!-- build:css styles/main.css -->
+        <link rel="stylesheet" href="styles/main.css">
+        <!-- endbuild -->
+    </head>
+    <body data-ng-controller="audioCtrl">
+        <div class="container">
+            <div id="titlebar">
+                <h2 data-ng-show="(playlist.length > 0) && playerData.selectedIndex !== null">{{playerData.fileName}} ({{playerData.selectedIndex + 1}}/{{playlist.length}})</h2>
+                <button id="close" class="icon-switch" data-ng-click="window.close()"></button>
+            </div>
+            <header class="clearfix">
+                <div id="analyser" class="col-6 col">
+                    <canvas id="analyser-bottom" width="460" height="100"></canvas>
+                    <canvas id="analyser-top" width="460" height="100"></canvas>
+                </div>
+                <canvas id="osc" width="460" height="100" class="col-6 col"></canvas>
+            </header>
+
+            <div id="track" data-ng-click="playerData.playingIndex != null && controlAudio.seekTo($event)" class="col-12 col">
+                <div id="track-progress"data-ng-style="{'width': (playerData.currentTime / playerData.duration) * 940 + 'px'} "></div>
+            </div>
+            <audio id="player" src=""></audio>
+            <div id="controls" class="clearfix col-12 col">
+                <button class="play icon-play3"data-ng-click="controlAudio.play(playerData.selectedIndex)"data-ng-show="playerData.playingIndex === null"></button>
+                <button class="pause icon-pause2"data-ng-click="controlAudio.pause()" data-ng-show="playerData.playingIndex !== null"></button>
+                <button class="icon-eject" data-ng-click="openFile()"></button>
+                <button id="open-folder" class="icon-view-list" data-ng-click="openDir()"></button>
+                <div class="time" data-ng-show="playerData.playingIndex !== null">{{playerData.currentTimeFormatted}} / {{playerData.durationFormatted}}</div>
+                <div id="fader">
+                    <div class="rectangles">
+                        <div data-ng-repeat="rect in helpers.getTimes(7) track by $index" class="rect{{$index+1}} rect"></div>
+                    </div>
+                    <input type="range" min="0" max="100" data-ng-change="helpers.setVolume(gain.value)" data-ng-model="gain.value" data-ng-init="gain.value = 100">
+                    <div class="overlay" data-ng-style="{'width': gain.value / 2 + 'px'}">
+                        <div class="rectangles">
+                            <div data-ng-repeat="rect in helpers.getTimes(7) track by $index" class="rect{{$index+1}} rect"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="playlist" class="col-12 col">
+                <div
+                    data-ng-repeat="track in playlist"
+                    data-ng-dblclick="controlAudio.play($index)"
+                    class="track"
+                    data-ng-class="{'selected': playerData.selectedIndex == $index}"><span class="no">{{$index+1}}</span>{{track.name}}</div>
+            </div>
+        </div>
+
+
+        <!-- build:js scripts/vendor.js -->
+        <script src="scripts/vendor/angular.js"></script>
+        <script src="scripts/vendor/moment.js"></script>
+        <!-- bower:js -->
+        <!-- endbower -->
+        <!-- endbuild -->
+
+        <!-- build:js scripts/playa.js -->
+        <script src="scripts/app.js"></script>
+        <script src="scripts/helpers.js"></script>
+        <script src="scripts/audiocontext.js"></script>
+        <script src="scripts/animation.js"></script>
+        <script src="scripts/audioCtrl.js"></script>
+        <!-- endbuild -->
+    </body>
+</html>

@@ -1,0 +1,65 @@
+@font-face {
+  font-family: 'playa';
+  src: url("../fonts/playa.eot?gj3zkx");
+  src: url("../fonts/playa.eot?#iefixgj3zkx") format("embedded-opentype"), url("../fonts/playa.woff?gj3zkx") format("woff"), url("../fonts/playa.ttf?gj3zkx") format("truetype"), url("../fonts/playa.svg?gj3zkx#playa") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/www\/root\/playa\/app\/styles\/icons\.scss}line{font-family:\0000311}}
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'playa';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/www\/root\/playa\/app\/styles\/icons\.scss}line{font-family:\0000325}}
+.icon-cog:before {
+  content: "\e994";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/www\/root\/playa\/app\/styles\/icons\.scss}line{font-family:\0000329}}
+.icon-switch:before {
+  content: "\e9b6";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/www\/root\/playa\/app\/styles\/icons\.scss}line{font-family:\0000333}}
+.icon-play3:before {
+  content: "\ea1c";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/www\/root\/playa\/app\/styles\/icons\.scss}line{font-family:\0000337}}
+.icon-pause2:before {
+  content: "\ea1d";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/www\/root\/playa\/app\/styles\/icons\.scss}line{font-family:\0000341}}
+.icon-eject:before {
+  content: "\ea25";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/www\/root\/playa\/app\/styles\/icons\.scss}line{font-family:\0000345}}
+.icon-info:before {
+  content: "\e601";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/www\/root\/playa\/app\/styles\/icons\.scss}line{font-family:\0000349}}
+.icon-warning:before {
+  content: "\e603";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/www\/root\/playa\/app\/styles\/icons\.scss}line{font-family:\0000353}}
+.icon-speaker:before {
+  content: "\e600";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/www\/root\/playa\/app\/styles\/icons\.scss}line{font-family:\0000356}}
+.icon-view-list:before {
+  content: "\e602";
+}

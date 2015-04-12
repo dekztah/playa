@@ -1,0 +1,102 @@
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/www\/root\/playa\/app\/styles\/fader\.scss}line{font-family:\000031}}
+#fader {
+  width: 50px;
+  height: 20px;
+  position: relative;
+  float: right;
+  margin-top: 20px;
+  cursor: pointer;
+  text-align: right;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/www\/root\/playa\/app\/styles\/fader\.scss}line{font-family:\0000310}}
+#fader input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 50px;
+  background: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/www\/root\/playa\/app\/styles\/fader\.scss}line{font-family:\0000323}}
+#fader input::-webkit-slider-thumb {
+  width: 1px;
+  height: 20px;
+  background: none;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/www\/root\/playa\/app\/styles\/fader\.scss}line{font-family:\0000330}}
+#fader input::-moz-range-track {
+  background: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/www\/root\/playa\/app\/styles\/fader\.scss}line{font-family:\0000333}}
+#fader input::-moz-range-thumb {
+  width: 1px;
+  height: 20px;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  -moz-appearance: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/www\/root\/playa\/app\/styles\/fader\.scss}line{font-family:\0000342}}
+#fader .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  pointer-events: none;
+  overflow: hidden;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/www\/root\/playa\/app\/styles\/fader\.scss}line{font-family:\0000351}}
+#fader .overlay .rect {
+  background: #fff;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/www\/root\/playa\/app\/styles\/fader\.scss}line{font-family:\0000355}}
+#fader .rectangles {
+  width: 50px;
+  pointer-events: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/www\/root\/playa\/app\/styles\/fader\.scss}line{font-family:\0000359}}
+#fader .rect {
+  display: inline-block;
+  background: #999;
+  width: 5px;
+  margin-right: 2px;
+  vertical-align: bottom;
+  line-height: 1;
+  font-size: 1px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/www\/root\/playa\/app\/styles\/fader\.scss}line{font-family:\0000369}}
+#fader .rect1 {
+  height: 3px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/www\/root\/playa\/app\/styles\/fader\.scss}line{font-family:\0000369}}
+#fader .rect2 {
+  height: 6px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/www\/root\/playa\/app\/styles\/fader\.scss}line{font-family:\0000369}}
+#fader .rect3 {
+  height: 9px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/www\/root\/playa\/app\/styles\/fader\.scss}line{font-family:\0000369}}
+#fader .rect4 {
+  height: 12px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/www\/root\/playa\/app\/styles\/fader\.scss}line{font-family:\0000369}}
+#fader .rect5 {
+  height: 15px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/www\/root\/playa\/app\/styles\/fader\.scss}line{font-family:\0000369}}
+#fader .rect6 {
+  height: 18px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/www\/root\/playa\/app\/styles\/fader\.scss}line{font-family:\0000369}}
+#fader .rect7 {
+  height: 21px;
+}

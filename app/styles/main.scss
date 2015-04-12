@@ -1,0 +1,155 @@
+@import "fader.scss";
+@import "icons.scss";
+@charset "UTF-8";
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak],
+.ng-cloak, .x-ng-cloak,
+.ng-hide:not(.ng-hide-animate) {
+    display: none !important;
+}
+
+ng\:form {
+    display: block;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    background: none;
+
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255,255,255, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #fff;
+}
+body {
+    // padding: 0 20px 20px;
+    margin: 0;
+    background: #212121;
+    color: #fff;
+    font-family: 'Segoe UI';
+    text-transform: uppercase;
+}
+h1 {
+    font-size: 60px;
+    margin: 10px 0;
+    font-weight: normal;
+}
+.container {
+    width: 960px;
+    margin: 0 auto;
+}
+.col {
+    float: left;
+    margin: 0 10px;
+}
+@for $i from 1 through 12 {
+    .col-#{$i} {
+        width: #{$i * 60 + ($i - 1) * 20}px;
+    }
+}
+#track-info {
+    width: 450px;
+}
+.clearfix:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+canvas {
+    display: block;
+}
+button {
+    border: none;
+    background: none;
+    color: #fff;
+    padding: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    outline: none;
+}
+#titlebar {
+    position: absolute;
+    width: 100%;
+    height: 60px;
+    -webkit-app-region: drag;
+    top: 0;
+    left: 0;
+    h2 {
+        margin-left: 20px;
+    }
+}
+
+header {
+    margin-top: 60px;
+}
+#close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 2;
+    -webkit-app-region: no-drag;
+}
+#track {
+    // width: 900px;
+    background: #333;
+    height: 30px;
+    position: relative;
+}
+#track-progress {
+    background: #FD971F;
+    height: 30px;
+    width: 0;
+    pointer-events: none;
+}
+#analyser {
+    position: relative;
+    margin-bottom: 20px;
+}
+#analyser-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.time {
+    color: #F92672;
+    font-size: 30px;
+    float: left;
+    margin: 8px 0 0 20px;
+}
+#controls {
+    // width: 900px;
+}
+#open-folder {
+    font-size: 30px;
+    padding: 15px;
+}
+#controls button{
+    float: left;
+}
+#playlist {
+    height: 400px;
+    overflow-y: scroll;
+    background: #333;
+}
+.track {
+    padding: 5px 10px;
+
+    .no {
+        display: inline-block;
+        width: 30px;
+        color: #AE81FF;
+    }
+    &.selected {
+        background: #AE81FF;
+
+        .no {
+            color: #212121;
+        }
+    }
+}
+
+
