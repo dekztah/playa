@@ -51,7 +51,7 @@ angular.module('playa').factory('animation', function ($window, audioContext) {
 
         audioContext.oscContext.beginPath();
         for (i = 0; i < 460; i++) {
-            audioContext.oscContext.lineTo(i*2, oscData[i]/2.56);
+            audioContext.oscContext.lineTo(i*2, oscData[i*2]/2.56);
         }
         audioContext.oscContext.stroke();
     };
