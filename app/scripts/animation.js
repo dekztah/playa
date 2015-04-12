@@ -6,15 +6,12 @@ angular.module('playa').factory('animation', function ($window, audioContext) {
         barWidth = 21,
         spectrumHeight = 100,
         numBars = 20,
-        screenWidth = $window.innerWidth,
-        screenHeight = $window.innerHeight/2,
         analyserData,
         oscData,
         magnitude,
         i, y;
 
     self.requestId = null;
-    // analyserData = new Uint8Array(audioContext.analyser.frequencyBinCount);
     analyserData = new Float32Array(audioContext.analyser.frequencyBinCount);
     oscData = new Uint8Array(audioContext.osc.frequencyBinCount);
 
@@ -32,8 +29,6 @@ angular.module('playa').factory('animation', function ($window, audioContext) {
         if (self.requestId) {
             $window.cancelAnimationFrame(self.requestId);
             self.requestId = undefined;
-            // audioContext.analyserTopContext.clearRect(0, 0, 460, 100);
-            // audioContext.oscContext.clearRect(0, 0, 460, 100);
         }
     };
 
@@ -41,9 +36,7 @@ angular.module('playa').factory('animation', function ($window, audioContext) {
 
         // analyser
         audioContext.analyserTopContext.clearRect(0, 0, 460, spectrumHeight);
-        // audioContext.analyser.getByteFrequencyData(analyserData);
         audioContext.analyser.getFloatFrequencyData(analyserData);
-        // console.log(analyserData.length);
         for (i = 0; i < numBars; ++i) {
             magnitude = ( (100 + analyserData[3 + i*6]) * 1.15).toFixed();
 
@@ -57,7 +50,7 @@ angular.module('playa').factory('animation', function ($window, audioContext) {
         audioContext.oscContext.clearRect(0, 0, 460, 300);
 
         audioContext.oscContext.beginPath();
-        for (i = 0; i < screenWidth/2; i++) {
+        for (i = 0; i < 460; i++) {
             audioContext.oscContext.lineTo(i*2, oscData[i]/2.56);
         }
         audioContext.oscContext.stroke();

@@ -10,11 +10,7 @@
             "fileSystem": [
                 "directory"
             ]
-        },
-        "fullscreen",
-        "http://*/*",
-        "https://*/*",
-        "http://127.0.0.1/*"
+        }
     ],
     "icons": {
         "16": "images/icon-16.png",
