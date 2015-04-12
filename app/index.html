@@ -16,7 +16,7 @@
     <body data-ng-controller="audioCtrl">
         <div class="container">
             <div id="titlebar">
-                <h2 data-ng-show="(playlist.length > 0) && playerData.selectedIndex !== null">{{playerData.fileName}} ({{playerData.selectedIndex + 1}}/{{playlist.length}})</h2>
+                <h2 data-ng-show="playlist.length > 0 && playerData.selectedIndex !== null">{{playerData.fileName}} ({{playerData.selectedIndex + 1}}/{{playlist.length}})</h2>
                 <button id="close" class="icon-switch" data-ng-click="window.close()"></button>
             </div>
             <header class="clearfix">
@@ -32,7 +32,7 @@
             </div>
             <audio id="player" src=""></audio>
             <div id="controls" class="clearfix col-12 col">
-                <button class="play icon-play3"data-ng-click="controlAudio.play(playerData.selectedIndex)"data-ng-show="playerData.playingIndex === null"></button>
+                <button class="play icon-play3"data-ng-click="playerData.selectedIndex !== null && controlAudio.play(playerData.selectedIndex)"data-ng-show="playerData.playingIndex === null"></button>
                 <button class="pause icon-pause2"data-ng-click="controlAudio.pause()" data-ng-show="playerData.playingIndex !== null"></button>
                 <button class="icon-eject" data-ng-click="openFile()"></button>
                 <button id="open-folder" class="icon-view-list" data-ng-click="openDir()"></button>
